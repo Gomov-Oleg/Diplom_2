@@ -16,7 +16,7 @@ import static steps.UserSteps.createNewUser;
 
 
 
-public class CreateUserTest  extends BaseApiTest {
+public class CreateUserTest extends BaseApiTest {
 
     UserCreate userCreate;
     UserLogin userLogin;
@@ -42,6 +42,7 @@ public class CreateUserTest  extends BaseApiTest {
         createNewUser(userCreate)
                 .then()
                 .log().all()
+                .assertThat()
                 .statusCode(HTTP_OK)
                 .body("success", equalTo(true))
                 .body("user.email", equalTo(email))
@@ -62,6 +63,7 @@ public class CreateUserTest  extends BaseApiTest {
         createNewUser(userCreate)
                 .then()
                 .log().all()
+                .assertThat()
                 .statusCode(HTTP_FORBIDDEN)
                 .body("success", equalTo(false))
                 .body("message", equalTo(messageError));
@@ -80,6 +82,7 @@ public class CreateUserTest  extends BaseApiTest {
         createNewUser(userCreate)
                 .then()
                 .log().all()
+                .assertThat()
                 .statusCode(HTTP_FORBIDDEN)
                 .body("success", equalTo(false))
                 .body("message", equalTo(messageError));
@@ -98,6 +101,7 @@ public class CreateUserTest  extends BaseApiTest {
         createNewUser(userCreate)
                 .then()
                 .log().all()
+                .assertThat()
                 .statusCode(HTTP_FORBIDDEN)
                 .body("success", equalTo(false))
                 .body("message", equalTo(messageError));
@@ -116,6 +120,7 @@ public class CreateUserTest  extends BaseApiTest {
         createNewUser(userCreate)
                 .then()
                 .log().all()
+                .assertThat()
                 .statusCode(HTTP_FORBIDDEN)
                 .body("success", equalTo(false))
                 .body("message", equalTo(messageError));
