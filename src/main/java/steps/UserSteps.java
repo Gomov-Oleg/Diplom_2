@@ -10,7 +10,6 @@ import model.UserSuccessLoginResponse;
 import static data.TestData.*;
 import static io.restassured.RestAssured.given;
 
-
 // Шаги для пользователя
 public class UserSteps {
 
@@ -66,5 +65,4 @@ public class UserSteps {
             deleteUser(accessToken);
         }
     }
-
 }

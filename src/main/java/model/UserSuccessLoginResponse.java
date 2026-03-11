@@ -41,8 +41,4 @@ public class UserSuccessLoginResponse {
     public void setUserResponse(UserResponse userResponse) {
         this.userResponse = userResponse;
     }
-
-
-
-
 }

@@ -7,7 +7,6 @@ public class UserLogin {
     private String password;
 
     // Конструктор с параметрами: email и пароль
-
     public UserLogin(String email, String password) {
         this.email = email;
         this.password = password;
@@ -17,7 +16,6 @@ public class UserLogin {
     public UserLogin(){}
 
     // Геттеры и сеттеры
-
     public String getEmail() {
         return email;
     }

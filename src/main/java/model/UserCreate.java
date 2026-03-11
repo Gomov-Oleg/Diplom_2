@@ -18,7 +18,6 @@ public class UserCreate {
     public UserCreate(){}
 
     // Геттеры и сеттеры
-
     public String getEmail() {
         return email;
     }

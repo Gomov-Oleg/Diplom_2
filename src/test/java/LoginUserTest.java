@@ -15,6 +15,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static steps.UserSteps.createNewUser;
 import static steps.UserSteps.loginUser;
 
+// Класс тестирования авторизации пользователя
 public class LoginUserTest extends BaseApiTest {
 
     UserCreate userCreate;
@@ -41,7 +42,7 @@ public class LoginUserTest extends BaseApiTest {
         // Сохраняем имя, которое передаём при создании пользователя в переменную для дальнейшего сравнения с фактическим ответом
         String name = userCreate.getName();
 
-        // Передаём валидные email и пароль созданного пользователя
+        // Передаём валидную пару email-пароль созданного пользователя
         loginUser(userLogin)
                 .then()
                 .log().all()
